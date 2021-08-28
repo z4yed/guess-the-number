@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <title>Guess Game!</title>
+</head>
+
+<body style="background-color: rgba(160, 172, 168, 0.582);">
+
+    <main class="container vh-100 d-flex justify-content-center align-items-center ">
+        <div id="game-container" class="d-none bg-dark text-light p-4">
+            <pre class=""><strong>How it Works: </strong>
+
+                There is a secret number between 1 to 6. You have to guess that number.
+                If your guess is perfect, You will get <strong>2 Points</strong>. If the difference
+                is 1, You will get <strong>1 Point</strong>. If the difference is 2 or more,
+                You won't get any points. GOOD LUCK!!
+
+                NB: 
+                    - The secret number changes on every guess.
+                    - After each 5 guess, you will be notified. 
+
+            </pre>
+
+            <input type="number" id="guess-input" placeholder="Enter number between 1 to 6" class="form-control w-50 mx-auto">
+            <button id="guess-button" class="btn btn-primary d-block mx-auto my-3">Guess</button>
+
+            <div id="message">
+                <p id="info" class="fw-bold text-info text-center"></p>
+                <p id="error" class="fw-bold text-danger text-center"></p>
+                <p id="success" class="fw-bold text-success text-center"></p>
+            </div>
+
+        </div>
+
+        <div id="start-div" class="w-75 bg-dark d-flex justify-content-center align-items-center border rounded"
+            style="height: 200px;">
+            <div class="text-center text-white">
+                <h3>Welcome to Guess Game</h3>
+                <button type="button" id="start-button" class="btn btn-primary">Start</button>
+            </div>
+
+        </div>
+
+        <div id="ask-replay-div"
+            class="d-none w-75 bg-dark d-flex justify-content-center align-items-center border rounded"
+            style="height: 200px;">
+            <div class="text-center text-white">
+                <div class="text-center text-white">
+                    <h4> You have guessed <span id="times"></span> Times. Continue Playing ? </h4>
+                    <button type="button" id="yes" class="btn btn-success">Yes</button>
+                    <button type="button" id="no" class="btn btn-danger">No</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </main>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+
+    <script src="guessing_game.js"></script>
+
+</body>
+
+</html>
